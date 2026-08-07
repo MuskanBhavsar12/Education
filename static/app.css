@@ -1,0 +1,116 @@
+:root{
+  --hero:#0b1e36;
+  --accent:#f39c12;
+}
+
+html, body { scroll-behavior: smooth; }
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+}
+
+/* Navbar */
+#mainNav.navbar {
+  transition: background .3s, box-shadow .3s, padding .3s;
+  backdrop-filter: saturate(180%) blur(10px);
+}
+#mainNav.scrolled {
+  background: rgba(11, 30, 54, 0.9) !important;
+  box-shadow: 0 6px 18px rgba(0,0,0,.15);
+  padding-top: .5rem !important;
+  padding-bottom: .5rem !important;
+}
+.nav-link { font-weight: 500; }
+.nav-link.active { color: #fff !important; }
+.btn-student{
+  background: radial-gradient(120% 120% at 10% 10%, #ff67d7, #6a5cff 70%);
+  color: #fff; border: 0; font-weight: 600; border-radius: 999px;
+  box-shadow: 0 6px 18px rgba(106,92,255,.35);
+}
+.btn-student:hover { filter: brightness(1.05); color:#fff; }
+
+/* Hero (home only) */
+.hero{
+  min-height: 100vh;
+  background: radial-gradient(1200px 600px at 85% 10%, #0d2a52 0%, #0b1e36 60%, #081427 100%);
+  padding-top: 120px; color: #fff;
+}
+.hero-img{ border: 6px solid rgba(255,255,255,.05); }
+
+/* Page header (inner pages) */
+.page-header{
+  padding-top: 120px;
+  padding-bottom: 60px;
+  background: linear-gradient(135deg, #0b1e36 0%, #142e54 60%, #0b1e36 100%);
+  color:#fff;
+}
+
+/* Sections */
+.section-padding{ padding: 80px 0; }
+.section-title{
+  position: relative; display: inline-block; font-weight: 800;
+}
+.section-title::after{
+  content:""; position:absolute; left:0; bottom:-8px; width:40%; height:4px;
+  background: linear-gradient(90deg, var(--accent), transparent); border-radius: 4px;
+}
+
+/* Cards */
+.service-card .icon-badge{
+  width: 52px; height: 52px; display:grid; place-items:center;
+  border-radius: 12px; font-size: 26px;
+}
+.service-card img{ height: 170px; object-fit: cover; }
+.service-card, .course-card{
+  border:0; border-radius: 16px;
+  box-shadow: 0 8px 26px rgba(0,0,0,.08);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.service-card:hover, .course-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,.12);
+}
+.course-card img{ height: 200px; object-fit: cover; }
+
+/* Stats on About */
+.stat-card{
+  background:#fff; border-radius:16px; padding:22px; box-shadow:0 8px 24px rgba(0,0,0,.07);
+}
+
+/* Gallery */
+.gallery-img{
+  width:100%; height:210px; object-fit:cover; cursor:pointer; transition: transform .2s ease;
+}
+.gallery-img:hover{ transform: scale(1.02); }
+
+/* Notice bar */
+.notice-bar{
+  position: fixed; left:0; right:0; bottom:0; z-index: 1040;
+  background: #d90429; padding: .6rem 0; box-shadow: 0 -6px 16px rgba(0,0,0,.2);
+}
+
+/* Floating buttons */
+.whatsapp-fab{
+  position: fixed; right:18px; bottom:78px; z-index:1045;
+  width:54px; height:54px; border-radius:50%;
+  background:#25d366; color:#fff; display:grid; place-items:center;
+  font-size:28px; box-shadow: 0 10px 22px rgba(37,211,102,.5);
+  text-decoration:none;
+}
+.whatsapp-fab:hover{ color:#fff; filter: brightness(1.05); }
+
+.back-to-top{
+  position: fixed; right:18px; bottom:140px; z-index:1045;
+  width:46px; height:46px; border-radius:50%;
+  display:none; align-items:center; justify-content:center;
+  box-shadow:0 10px 22px rgba(0,0,0,.2);
+}
+
+/* Footer */
+footer { background:#0d1b2a; }
+
+/* Small tweaks */
+@media (max-width: 991.98px){
+  .hero{ padding-top: 100px; }
+  .page-header{ padding-top: 100px; padding-bottom: 50px; }
+}
